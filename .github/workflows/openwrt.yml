@@ -44,6 +44,17 @@ jobs:
         run: |
           echo "src-git kenzo https://github.com/kenzok8/openwrt-packages" >> ./feeds.conf.default 
           echo "src-git small https://github.com/kenzok8/small" >> ./feeds.conf.default
+          echo  "src-git store https://ghproxy.com/https://github.com/linkease/istore.git
+          echo "src-git third https://ghproxy.com/https://github.com/jjm2473/openwrt-third.git main" >> ./feeds.conf.default
+          echo "src-git third_party https://ghproxy.com/https://github.com/linkease/istore-packages.git" >> ./feeds.conf.default
+          echo "src-git diskman https://ghproxy.com/https://github.com/jjm2473/luci-app-diskman.git" >> ./feeds.conf.default
+          echo "src-git oaf https://ghproxy.com/https://github.com/jjm2473/OpenAppFilter.git" >> ./feeds.conf.default
+          echo "src-git linkease_nas https://ghproxy.com/https://github.com/linkease/nas-packages.git" >> ./feeds.conf.default
+          echo "src-git linkease_nas_luci https://ghproxy.com/https://github.com/linkease/nas-packages-luci.git" >> ./feeds.conf.default
+          echo "src-git jjm2473_apps https://ghproxy.com/https://github.com/jjm2473/openwrt-apps.git" >> ./feeds.conf.default
+
+          
+          
       - name: Install OpenClash
         run: |
           mkdir package/luci-app-openclash
